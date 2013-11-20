@@ -51,9 +51,11 @@ except OSError:
     print (term.format("\nThis %s:%d does not seem to be a functional bridge!\n"%
            (argv[1],port),
            term.Color.RED))
+    exit(1)
 else:
     print (term.format("\n%s:%d is a valid bridge.\n"%
            (argv[1],port),
            term.Color.GREEN))
     process.kill()
+    exit(0)
 
